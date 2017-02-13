@@ -20,51 +20,63 @@ body::before {
 header {
   background-color: #f4f4f4;
   border-bottom: 1px solid #e8e8e8;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  min-height: 60vh;
-  padding: 2rem .5rem;
+  margin-bottom: 1rem;
+  padding: 4rem .5rem;
 }
 
 section {
-  padding: 4rem .5rem;
+  padding: 1rem .5rem;
   margin-left: auto;
   margin-right: auto;
   max-width: 60rem;
 }
 
+footer {
+  background-color: #f4f4f4;
+  border-top: 1px solid #e8e8e8;
+  color: #888;
+  margin-top: 1rem;
+  padding: 2rem .5rem;
+  text-align: center;
+}
 
 h1 {
   color: #53e295;
-  font-size: 6rem;
+  font-size: 4rem;
   font-weight: 900;
-  line-height: 1.2;
-  margin: 0;
+  line-height: 1;
+  margin: 0 0 1rem;
   text-align: center;
 }
 
 h2 {
   color: #53e295;
   // color: #53b2e2;
-  font-size: 2.5rem;
+  font-size: 1.5rem;
   font-weight: 300;
   line-height: 1.2;
-  margin: 0;
+  margin: 0 0 1rem;
 }
 
 h3 {
   color: #555;
-  font-size: 1.5rem;
+  font-size: 1.125rem;
   font-weight: 300;
   margin: 0;
   text-align: center;
+}
+
+a {
+  color: #53e295;
+  font-weight: 900;
+  text-decoration: none;
 }
 
 p {
   color: #555;
   font-size: 1rem;
   font-weight: 300;
+  margin: 0 0 .5rem;
 }
 
 code {
@@ -76,12 +88,60 @@ code {
   padding: .125rem .25rem;
 }
 
+pre code {
+  display: block;
+  height: 100%;
+  overflow: auto;
+  padding: .5rem 1rem;
+}
+
 pre {
-  margin: 1rem;
+  height: 100%;
+  margin: 0;
+}
+
+.examples {
+  margin-top: 2rem;
+  margin-bottom: 2rem;
 }
 
 .grid-item {
+  align-items: center;
   background-color: #53e295;
   border-radius: 2px;
+  color: #fff;
+  display: flex;
+  justify-content: center;
   height: 2rem;
+}
+
+@media screen and (min-width: 60em) {
+  header {
+    padding-top: 10rem;
+    padding-bottom: 10rem;
+    margin-bottom: 2rem;
+  }
+
+  section {
+    padding-top: 4rem;
+    padding-bottom: 4rem;
+  }
+  
+  footer {
+    margin-top: 2rem;
+    padding-top: 4rem;
+    padding-bottom: 4rem;
+  }
+  
+  h1 {
+    font-size: 6rem;
+  }
+  
+  h2 {
+    font-size: 2.5rem;
+  }
+  
+  h3 {
+    font-size: 1.5rem;
+  }
 }

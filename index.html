@@ -4,41 +4,74 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>smpl.grd</title>
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Nunito:300,900">
-  <link rel="stylesheet" href="smpl-grd.css.gz">
-  <link rel="stylesheet" href="styles.css">
   <link rel="icon" type="image/png" href="favicon.png">
+  <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Nunito:300,900">
+  <link rel="stylesheet" href="src/smpl.grd.css">
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
   <header>
     <h1>smpl.grd</h1>
     <h3>a simple, responsive flexbox grid</h3>
   </header>
-  <section style="display: none;">
-    <div class="row">
-      <div class="col-sm-3"><div class="grid-item"></div></div>
-      <div class="col-sm-3"><div class="grid-item"></div></div>
-      <div class="col-sm-3"><div class="grid-item"></div></div>
-      <div class="col-sm-3"><div class="grid-item"></div></div>
-      <div class="col-sm-4"><div class="grid-item"></div></div>
-      <div class="col-sm-4"><div class="grid-item"></div></div>
-      <div class="col-sm-4"><div class="grid-item"></div></div>
-      <div class="col-sm-6"><div class="grid-item"></div></div>
-      <div class="col-sm-6"><div class="grid-item"></div></div>
-      <div class="col-sm-12"><div class="grid-item"></div></div>
-    </div>
-  </section>
   <section>
     <h2>What is it?</h2>
-    <p>smpl.grd is a stupidly simple responsive grid system built with flexbox. </p>
+    <p>smpl.grd is a stupidly simple responsive grid system built with flexbox. it's meant to be an easy-to-customize grid solution for those looking to avoid a bloated front-end framework.</p>
+  </section>
+  <section>
+    <h2>How do I get it?</h2>
+    <p>view source code on <a href="//github.com/caseyjacobson/smpl.grd">github</a>. compiled css is available with standard options, or the source .scss file may be edited to customize the grid. options include column count, gutter size and breakpoints. either include the .scss file in your build process or <code>yarn run sass</code> to build your new css file.</p>
+  </section>
+  <section>
+    <h2>Where are the missing features?</h2>
+    <p>some call them features, others call them excess code. smpl.grd is meant to provide the bare necessities in a grid system. if your project needs more feel free to build on top of what this framework provides. </p>
   </section>
   <section>
     <h2>How do I use it?</h2>
-    <p>source file may be edited to customize the grid. options include column count, gutter size and breakpoints. either include the .scss file in your build process or run <code>yarn run sass</code> to build a new css file.</p>
+    <p>the markup uses familiar row and column class names by default, but these are customizable. start with a <code>.{row}</code> and add <code>.{col}-{bp-size}-{col-count}</code>. here are some examples using the default options. resize your browser to see the columns stack at each breakpoint.</p>
+    <div class="row examples">
+      <div class="col-sm-4">
+<pre><code>$row-name: row;
+$col-name: col;
+$cols: 12;
+$gutter: 1rem;
+$sizes: (
+  xs: null,
+  sm: 40em,
+  md: 60em,
+  lg: 80em
+);</code></pre>
+      </div>
+      <div class="col-sm-8">
+<pre><code>&lt;div class="row"&gt;
+  &lt;div class="col-xs-6 col-md-3"&gt;.col-xs-6 .col-md-3&lt;/div&gt;
+  &lt;div class="col-xs-6 col-md-3"&gt;.col-xs-6 .col-md-3&lt;/div&gt;
+  &lt;div class="col-sm-6 col-md-3"&gt;.col-sm-6 .col-md-3&lt;/div&gt;
+  &lt;div class="col-sm-6 col-md-3"&gt;.col-sm-6 .col-md-3&lt;/div&gt;
+  &lt;div class="col-md-4"&gt;.col-md-4&lt;/div&gt;
+  &lt;div class="col-md-4"&gt;.col-md-4&lt;/div&gt;
+  &lt;div class="col-md-4"&gt;.col-md-4&lt;/div&gt;
+  &lt;div class="col-lg-6"&gt;.col-lg-6&lt;/div&gt;
+  &lt;div class="col-lg-6"&gt;.col-lg-6&lt;/div&gt;
+  &lt;div class="col-lg-12"&gt;.col-lg-12&lt;/div&gt;
+&lt;/div&gt;</code></pre>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-xs-6 col-md-3"><div class="grid-item">.col-xs-6 .col-md-3</div></div>
+      <div class="col-xs-6 col-md-3"><div class="grid-item">.col-xs-6 .col-md-3</div></div>
+      <div class="col-sm-6 col-md-3"><div class="grid-item">.col-sm-6 .col-md-3</div></div>
+      <div class="col-sm-6 col-md-3"><div class="grid-item">.col-sm-6 .col-md-3</div></div>
+      <div class="col-md-4"><div class="grid-item">.col-md-4</div></div>
+      <div class="col-md-4"><div class="grid-item">.col-md-4</div></div>
+      <div class="col-md-4"><div class="grid-item">.col-md-4</div></div>
+      <div class="col-lg-6"><div class="grid-item">.col-lg-6</div></div>
+      <div class="col-lg-6"><div class="grid-item">.col-lg-6</div></div>
+      <div class="col-lg-12"><div class="grid-item">.col-lg-12</div></div>
+    </div>
   </section>
-  <section>
-    <h2>use</h2>
-    <p></p>
-  </section>
+  <footer>
+    created by <a href="//caseyjacobson.com">casey jacobson</a>
+  </footer>
 </body>
 </html>

@@ -1,3 +1,5 @@
+$row-name: row;
+$col-name: col;
 $cols: 12;
 $gutter: 1rem;
 $sizes: (
@@ -7,22 +9,23 @@ $sizes: (
   lg: 80em
 );
 
-.row {
+.#{$row-name} {
   display: flex;
   flex-flow: row wrap;
   margin: -$gutter/2;
 }
 
-[class*='col-'] {
+[class*='#{$col-name}-'] {
   flex: 0 0 100%;
+  overflow: hidden;
   padding: $gutter/2;
 }
 
 @mixin grid($size) {
-  @for $i from 1 through $cols {
-    .col-#{$size}-#{$i} {
-      flex-basis: percentage($i/$cols);
-      max-width: percentage($i/$cols);
+  @for $col from 1 through $cols {
+    .#{$col-name}-#{$size}-#{$col} {
+      flex-basis: percentage($col/$cols);
+      max-width: percentage($col/$cols);
     }
   }
 }

@@ -1,0 +1,20 @@
+{
+  "name": "smpl-grd",
+  "version": "1.0.0",
+  "description": "A simple responsive flexbox grid",
+  "main": "index.html",
+  "repository": "github.com/caseyjacobson/smpl-grd",
+  "author": "Casey Jacobson",
+  "license": "MIT",
+  "devDependencies": {
+    "autoprefixer": "^6.7.2",
+    "node-sass": "^4.5.0",
+    "postcss-cli": "^2.6.0"
+  },
+  "browserslist": [
+    "last 2 versions"
+  ],
+  "scripts": {
+    "sass": "node-sass --output-style compressed smpl-grd.scss smpl-grd.css"
+  }
+}

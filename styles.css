@@ -1,0 +1,87 @@
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #fff;
+  font-family: 'Nunito', sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+body::before {
+  background: linear-gradient(to right, #53e295, #96e6bc, #53e295);
+  content: '';
+  display: block;
+  height: 4px;
+  width: 100%;
+}
+
+header {
+  background-color: #f4f4f4;
+  border-bottom: 1px solid #e8e8e8;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  min-height: 60vh;
+  padding: 2rem .5rem;
+}
+
+section {
+  padding: 4rem .5rem;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 60rem;
+}
+
+
+h1 {
+  color: #53e295;
+  font-size: 6rem;
+  font-weight: 900;
+  line-height: 1.2;
+  margin: 0;
+  text-align: center;
+}
+
+h2 {
+  color: #53e295;
+  // color: #53b2e2;
+  font-size: 2.5rem;
+  font-weight: 300;
+  line-height: 1.2;
+  margin: 0;
+}
+
+h3 {
+  color: #555;
+  font-size: 1.5rem;
+  font-weight: 300;
+  margin: 0;
+  text-align: center;
+}
+
+p {
+  color: #555;
+  font-size: 1rem;
+  font-weight: 300;
+}
+
+code {
+  background: #555;
+  border-radius: 2px;
+  color: #fff;
+  display: inline-block;
+  line-height: 1.4;
+  padding: .125rem .25rem;
+}
+
+pre {
+  margin: 1rem;
+}
+
+.grid-item {
+  background-color: #53e295;
+  border-radius: 2px;
+  height: 2rem;
+}

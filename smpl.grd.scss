@@ -1,0 +1,38 @@
+$cols: 12;
+$gutter: 1rem;
+$sizes: (
+  xs: null,
+  sm: 40em,
+  md: 60em,
+  lg: 80em
+);
+
+.row {
+  display: flex;
+  flex-flow: row wrap;
+  margin: -$gutter/2;
+}
+
+[class*='col-'] {
+  flex: 0 0 100%;
+  padding: $gutter/2;
+}
+
+@mixin grid($size) {
+  @for $i from 1 through $cols {
+    .col-#{$size}-#{$i} {
+      flex-basis: percentage($i/$cols);
+      max-width: percentage($i/$cols);
+    }
+  }
+}
+
+@each $size, $bp in $sizes {
+  @if $bp {
+    @media screen and (min-width: $bp) {
+      @include grid($size);
+    }
+  } @else {
+    @include grid($size);
+  }
+}

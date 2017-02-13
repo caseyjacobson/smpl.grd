@@ -144,4 +144,9 @@ pre {
   h3 {
     font-size: 1.5rem;
   }
+
+  .examples {
+    margin-top: 4rem;
+    margin-bottom: 4rem;
+  }
 }

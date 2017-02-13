@@ -22,6 +22,7 @@ header {
   border-bottom: 1px solid #e8e8e8;
   margin-bottom: 1rem;
   padding: 4rem .5rem;
+  text-align: center;
 }
 
 section {
@@ -46,12 +47,10 @@ h1 {
   font-weight: 900;
   line-height: 1;
   margin: 0 0 1rem;
-  text-align: center;
 }
 
 h2 {
   color: #53e295;
-  // color: #53b2e2;
   font-size: 1.5rem;
   font-weight: 300;
   line-height: 1.2;
@@ -62,8 +61,7 @@ h3 {
   color: #555;
   font-size: 1.125rem;
   font-weight: 300;
-  margin: 0;
-  text-align: center;
+  margin: 0 0 1.5rem;
 }
 
 a {
@@ -98,6 +96,17 @@ pre code {
 pre {
   height: 100%;
   margin: 0;
+}
+
+.btn {
+  border-radius: 2px;
+  display: inline-block;
+  padding: .5rem 1.5rem;
+}
+
+.btn-main {
+  background: #53e295;
+  color: #fff;
 }
 
 .examples {
